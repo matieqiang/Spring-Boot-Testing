@@ -21,6 +21,7 @@ public class IntegrationTests {
 
     Iterable<Employee> employees = employeeController.read();
     Assertions.assertThat(employees).first().hasFieldOrPropertyWithValue("firstName", "Lokesh");
+    Assertions.assertThat(employees).first().hasFieldOrPropertyWithValue("lastName", "Gupta");
 
     employeeController.delete(employeeResult.getId());
     Assertions.assertThat(employeeController.read()).isEmpty();

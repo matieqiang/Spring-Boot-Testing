@@ -35,6 +35,12 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(EmployeeController.class)
 public class StandaloneControllerTests {
 
+    /**
+     * Spring boot @MockBean annotation used to add mocks to a Spring ApplicationContext.
+     * The mock will replace any existing single bean of the same type defined in the context. If no existing bean is defined a new one will be added.
+     * If there is more than one bean of the requested type, @Qualifier metadata must be specified at the field level.
+     *
+     */
     @MockBean
     EmployeeService employeeService;
 
